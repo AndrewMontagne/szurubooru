@@ -19,13 +19,13 @@
                         class: 'safety-sketchy',
                         value: 'sketchy',
                         selectedValue: ctx.post.safety,
-                        text: 'Sketchy'}) %>
+                        text: 'Suggestive'}) %>
                     <%= ctx.makeRadio({
                         name: 'safety',
                         value: 'unsafe',
                         selectedValue: ctx.post.safety,
                         class: 'safety-unsafe',
-                        text: 'Unsafe'}) %>
+                        text: 'Explicit'}) %>
                 </div>
             </section>
         <% } %>
