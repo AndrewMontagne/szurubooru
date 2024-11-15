@@ -54,6 +54,7 @@
             </section>
         <% } %>
 
+        <!--
         <section class='search'>
             Search on
             <a href='http://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
@@ -66,6 +67,7 @@
 
             <div class='fav-container'></div>
         </section>
+        -->
     </article>
 
     <% if (ctx.post.relations.length) { %>
