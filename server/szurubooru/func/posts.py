@@ -392,6 +392,10 @@ def get_posts_by_ids(ids: List[int]) -> List[model.Post]:
     return sorted(posts, key=lambda post: id_order.get(post.post_id))
 
 
+def get_all_posts() -> List[model.Post]:
+    return db.session.query(model.Post).all()
+
+
 def try_get_current_post_feature() -> Optional[model.PostFeature]:
     return (
         db.session.query(model.PostFeature)

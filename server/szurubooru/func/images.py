@@ -99,7 +99,7 @@ class Image:
                 "-f",
                 "lavfi",
                 "-i",
-                "color=white:s=%dx%d" % (self.width, self.height),
+                "color=1A1A1A:s=%dx%d" % (self.width, self.height),
                 "-i",
                 "{path}",
                 "-f",

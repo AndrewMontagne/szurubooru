@@ -308,3 +308,21 @@ def get_posts_by_image(
             for distance, post in lookalikes
         ],
     }
+
+@rest.routes.get("/util/regenerate_thumbs")
+def regenerate_thumbs(
+    ctx: rest.Context, _params: Dict[str, str] = {}
+) -> rest.Response:
+    auth.verify_privilege(ctx.user, "posts:edit:content")
+
+    count = 0
+
+    all_posts = posts.get_all_posts()
+    for post in all_posts:
+        try:
+            posts.generate_post_thumbnail(post)
+            count += 1
+        except:
+            pass
+
+    return {"count": count}
