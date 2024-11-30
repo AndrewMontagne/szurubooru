@@ -61,13 +61,13 @@
             <a href='https://danbooru.donmai.us/posts?tags=md5:<%- ctx.post.checksumMD5 %>'>Danbooru</a> &middot;
             <a href='https://www.google.com/searchbyimage?&image_url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>Google Images</a>
         </section>
+        -->
 
-        <section class='social'>
+        <section class='social' style="display: none">
             <div class='score-container'></div>
 
             <div class='fav-container'></div>
         </section>
-        -->
     </article>
 
     <% if (ctx.post.relations.length) { %>
