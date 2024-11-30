@@ -1,6 +1,7 @@
 <div class='post-content post-type-<%- ctx.post.type %>'>
     <% if (['image', 'animation'].includes(ctx.post.type)) { %>
 
+        <img class='resize-listener' alt='' src='<%- ctx.post.thumbnailUrl %>'/>
         <img class='resize-listener' alt='' src='<%- ctx.post.contentUrl %>'/>
 
     <% } else if (ctx.post.type === 'flash') { %>
